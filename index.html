@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Turismo Perú</title>
+ <link rel="shortcut icon" href="img/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Turismo Perú</h1>
+
+    <input type="checkbox" id="menu-toggle" placeholder="Contacto">
+    <label for="menu-toggle" class="menu-icon">
+      <i class="fas fa-bars"></i>
+    </label>
+
+    <nav class="menu">
+      <a href="#destinos">Destinos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="intro">
+      <h2>Descubre el Perú Mágico</h2>
+      <p>Explora Machu Picchu, la Amazonía y más lugares impresionantes.</p>
+      <button class="btn-reserva">Reserva tu viaje</button>
+    </section>
+
+    <section id="destinos">
+      <div class="card">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.-zEaH67LbWFVALrtODYD5AHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Machu Picchu">
+        <h3>Machu Picchu</h3>
+      </div>
+      <div class="card">
+        <img src="https://th.bing.com/th/id/R.0b2a8b9dbdd3405b869cce402c39e159?rik=M%2fyYEdocOdd59Q&pid=ImgRaw&r=0" alt="Amazonas">
+        <h3>Amazonas</h3>
+      </div>
+      <div class="card">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.nTWQ5dc51V6hlyd1cw5LVwHaFj?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Huacachina">
+        <h3>Huacachina</h3>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Síguenos en:</p>
+    <div class="redes">
+      <a href="#">Facebook<i class="fab fa-facebook"></i></a>
+      <a href="#">Instagram<i class="fab fa-instagram"></i></a>
+      <a href="#">Youtube<i class="fab fa-youtube"></i></a>
+    </div>
+    <p>© 2025 EDITH ROCIOªTurismo Perú</p>
+  </footer>
+
+  <!-- Formulario flotante -->
+  <div class="form-flotante" id="contacto">
+    <h3>Contáctanos</h3>
+    <form>
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Correo" required>
+      <textarea placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+ <!-- Botón WhatsApp con toggle -->
+<input type="checkbox" id="chat-toggle" placeholder="Whatsapp">
+<label for="chat-toggle" class="whatsapp"><i class="fab fa-whatsapp"></i></label>
+
+<!-- Ventana de chat flotante -->
+<div class="chat-flotante">
+  <h3>Hola 👋</h3>
+  <p>¿En qué podemos ayudarte?</p>
+  <textarea placeholder="Escribe tu mensaje..."></textarea>
+  <button>Enviar</button>
+</div>
+
+
+</body>
+</html>

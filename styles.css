@@ -1,0 +1,266 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: white;
+    color:rgb(10, 10, 10)
+}
+
+/*Header y menú toggle*/
+header{
+    background: #01f816;
+    color: rgb(9, 8, 8);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header h1{font-size: 24px;}
+
+.menu{
+    display: flex;
+    gap: 20px;
+}
+
+.menu a{
+    color: rgb(5, 5, 5);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#menu-toggle{
+    display: none;
+}
+
+.menu-icon{
+    font-size: 28px;
+    cursor: pointer;
+    display: none; 
+}
+
+/*intro*/
+#intro{
+    text-align: center;
+    padding: 40px;
+    background: white;
+}
+
+.btn-reserva{
+    padding: 15px 30px;
+    background: rgb(53, 224, 175);
+    color: rgb(5, 5, 5);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn-reserva:hover{
+    transform: scale(1.1);
+    background: rgb(210, 11, 143);
+}
+
+/*Galería destinos*/
+#destinos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.card{
+    background: rgb(9, 9, 9);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 400px;
+    box-shadow: 0 6px 20px rgb(0,0,0,0,2);
+    transition: transform 0.4s, opacity 0.4s;
+}
+
+.card img{
+    width: 100%;
+    transition: transform 0.8s ease;
+}
+
+.card img:hover{
+    transform: scale(1.05);
+}
+
+.card h3{
+    text-align: center;
+    padding: 10px;
+}
+
+.card:hove{
+    transform: translateY(-8px);
+}
+
+/*Footer*/
+footer{
+    background: rgb(186, 83, 184);
+    color: rgb(4, 4, 4);
+    text-align: center;
+    padding: 20px;
+}
+
+.redes a{
+    font-size: 24px;
+    margin: 0 12px;
+    color: white;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.redes a:hover{
+    transform: scale(1.2);
+    color: skyblue;
+}
+
+/*formulario flotante*/
+.form-flotante{
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 6px 20px rgb(0,0,0,0,2);
+    width: 280px; 
+}
+
+.form-flotante h3{
+    margin: 0 0 10px;
+}
+
+.form-flotante input,
+.form-flotante textarea,
+.form-flotante button{
+    width: 100%;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.form-flotante button{
+    background: turquoise;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.form-flotante button:hover{
+    background: blue;
+}
+
+/*Animacioen de rebote*/
+@keyframes bounce{
+    0%, 100% {transform: translateY(0)}
+    50% {transform: translateY(-8px);}
+}
+
+/*Botón Whatsapp animad*/
+.whatsapp{
+    position: fixed;
+    bottom: 20px;
+    right: 200px;
+    background: green;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgb(0,0,0,0.3);
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    z-index: 999;
+}
+
+/*ocultar inpu checkbox*/
+#chat-toggle{
+    display: none;
+}
+
+/*ventana de chat*/
+.chat-flotante{
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: white;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 0 6px 20px rgb(0,0,0,0.3);
+    width: 260px;
+    display: none;
+    z-index: 999;
+}
+
+.chat-flotante h3{
+    margin: 0 0 8px;
+}
+
+.chat-flotante p{
+    margin:0 0 10px ;
+    font-size: 14px;
+}
+
+.chat-flotante textarea{
+    width: 100%;
+    height: 60px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.chat-flotante button{
+    width: 100%;
+    background: turquoise;
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.chat-flotante button:hover{
+    background: blue;
+}
+
+/*Mostrar chat al activar toggle*/
+#chat-toggle:checked + .whatsapp + .chat-flotante{
+    display: block;
+}
+
+/*Responsive*/
+@media (max-width:768px){
+    .menu{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: blue;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+
+#menu-toggle:checked + .menu-icon + .menu{
+    display:flex ;
+}
+
+.menu-icon{
+    display: block;
+}
+
+#destinos{
+    flex-direction: column;
+    align-items: center;
+}
+}
